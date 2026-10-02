@@ -6,15 +6,15 @@
   <title>K-Drama World - Contact</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">K-Drama World</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="acceuil.html">K-Drama World</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,35 +28,31 @@
     </div>
   </nav>
 
- <!-- Section À propos de nous -->
-<div id="apropos" class="container my-5 apropos-section">
-  <h2 class="section-title">🎬 À propos de nous</h2>
-  <div class="row align-items-center">
-    <!-- Colonne image -->
-    <div class="col-md-6">
-      <img src="fourhands.jpg" alt="Univers K-Drama" class="img-fluid rounded shadow">
-    </div>
-    <!-- Colonne texte -->
-    <div class="col-md-6">
-      <p>
-        Bienvenue sur <strong>K-Drama World</strong> !  
-        Notre passion est de partager avec vous les dernières sorties, les dramas incontournables et toutes les infos sur l’univers des séries coréennes.  
-        Ici, vous trouverez des recommandations, des exclusivités et un espace dédié aux fans de K‑dramas.
-      </p>
+  <!-- Section À propos de nous -->
+  <div id="apropos" class="container my-5 apropos-section">
+    <h2 class="section-title">🎬 À propos de nous</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-3">
+        <img src="fourhands.jpg" alt="Univers K-Drama" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <p>
+          Bienvenue sur <strong>K-Drama World</strong> !
+          Notre passion est de partager avec vous les dernières sorties, les dramas incontournables et toutes les infos sur l’univers des séries coréennes.
+          Ici, vous trouverez des recommandations, des exclusivités et un espace dédié aux fans de K‑dramas.
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-
-
-     <!-- Section Contact -->
+  <!-- Section Contact -->
   <div id="contact" class="container my-5">
     <h2 class="section-title">📩 Contactez-nous</h2>
 
     <div class="row">
-      <!-- Formulaire -->
-      <div class="col-md-7">
-        <form>
+      <!-- Formulaire (validé par script.js) -->
+      <div class="col-md-7 mb-4">
+        <form id="contact-form" novalidate>
           <div class="mb-3">
             <label for="name" class="form-label">Nom</label>
             <input type="text" class="form-control" id="name" placeholder="Votre nom">
@@ -70,6 +66,7 @@
             <textarea class="form-control" id="message" rows="5" placeholder="Votre message..."></textarea>
           </div>
           <button type="submit" class="btn btn-contact">Envoyer</button>
+          <p id="form-message" class="form-message" role="status"></p>
         </form>
       </div>
 
@@ -86,11 +83,16 @@
   </div>
 
   <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 footer-section">
-  <p>© 2026 K-Drama World | Tous droits réservés</p>
-  <div class="social-icons mt-2">
-    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-  </div>
-</footer>
+  <footer class="bg-dark text-white text-center py-4 footer-section">
+    <p>© 2026 K-Drama World | Tous droits réservés</p>
+    <div class="social-icons mt-2">
+      <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

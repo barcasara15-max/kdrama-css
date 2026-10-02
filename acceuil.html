@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>k-drama World</Wbr>orld</title>
-    <!-- lien vers Bootstrap -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-       <!-- Lien vers ton fichier CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Drama World</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <!-- Nom/logo -->
-    <a class="navbar-brand" href="acceuil.html">K-Drama World</a>
-
-    <!-- Bouton hamburger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Menu caché qui s’affiche quand on clique -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="acceuil.html">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="avoir.html">À voir</a></li>
-        <li class="nav-item"><a class="nav-link" href="prochainesortie.html">prochaines sortie </a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="acceuil.html">K-Drama World</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="acceuil.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="avoir.html">À voir</a></li>
+          <li class="nav-item"><a class="nav-link" href="prochainesortie.html">Prochaines sorties</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- Section accueil -->
+  <section class="hero text-center">
+    <div class="hero-content">
+      <h1>Plongez dans l'univers des K‑dramas</h1>
+      <h2 id="welcome">Bienvenue !</h2>
+      <p>Découvrez les meilleurs dramas à voir et les prochaines sorties</p>
+      <a href="avoir.html" class="btn-hero">Découvrir maintenant</a>
+    </div>
+  </section>
 
-    <section class="hero">
-  <div class="hero-content">
-    <h1>Plongez dans l'univers des K‑dramas</h1>
-    <p>Découvrez les meilleurs dramas à voir et les prochaines sorties</p>
-    <a href="avoir.html" class="btn-hero">Découvrir maintenant</a>
-  </div>
-</section>
+  <!-- Carrousel (géré par script.js) -->
+  <section class="carousel-simple my-5">
+    <img src="Vagabond.jpg" class="slide" alt="Affiche de Vagabond">
+    <img src="Ballerina.jpg" class="slide" alt="Affiche de Ballerina">
+    <img src="weak.jpg" class="slide" alt="Affiche de Weak Hero Class">
+  </section>
 
-   <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 footer-section">
-  <p>© 2026 K-Drama World | Tous droits réservés</p>
-  <div class="social-icons mt-2">
-    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-  </div>
-</footer>
+  <!-- Newsletter -->
+  <section class="container my-5 newsletter">
+    <h3>Ne rate aucune sortie</h3>
+    <p>Laisse ton e-mail pour être prévenu des nouveaux dramas.</p>
+    <form id="newsletter-form" novalidate>
+      <input type="email" id="newsletter-email" placeholder="Ton e-mail" class="form-control mb-2" aria-label="Ton e-mail">
+      <button type="submit" class="btn btn-contact">S'inscrire</button>
+      <p id="newsletter-message" class="form-message" role="status"></p>
+    </form>
+  </section>
 
-      <!-- Script Bootstrap -->
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 footer-section">
+    <p>© 2026 K-Drama World | Tous droits réservés</p>
+    <div class="social-icons mt-2">
+      <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

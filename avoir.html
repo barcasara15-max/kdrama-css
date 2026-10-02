@@ -6,23 +6,23 @@
   <title>K-Drama World - À voir</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
- <link rel="stylesheet" href="styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">K-Drama World</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="acceuil.html">K-Drama World</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="acceuil.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#categories">À voir</a></li>
+          <li class="nav-item"><a class="nav-link" href="acceuil.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="avoir.html">À voir</a></li>
           <li class="nav-item"><a class="nav-link" href="prochainesortie.html">Prochaines sorties</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card">
-          <img src="bb7.jpg" class="card-img-top" alt="A Love Other Than Yours">
+          <img src="bb7.jpg" class="card-img-top" alt="Affiche de A Love Other Than Yours">
           <div class="card-body">
             <h5 class="card-title">A Love Other Than Yours</h5>
             <p class="card-text">Une romance réaliste sur un couple ensemble depuis dix ans, confronté à la question du changement et de la fidélité.</p>
@@ -68,7 +68,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card">
-          <img src="ׄ    ᯏ the east palace !.jpg" class="card-img-top" alt="The East Palace">
+          <img src="ׄ    ᯏ the east palace !.jpg" class="card-img-top" alt="Affiche de The East Palace">
           <div class="card-body">
             <h5 class="card-title">The East Palace</h5>
             <p class="card-text">Un drame historique et fantastique où un chasseur d’esprits et une dame de cour affrontent une malédiction royale.</p>
@@ -78,120 +78,131 @@
     </div>
   </div>
 
-  <!-- Liste horizontale Romance -->
-  <div class="container my-5" id="romance">
+  <!-- Recherche (gérée par script.js) -->
+  <div class="container">
+    <div class="search-bar">
+      <input type="search" id="recherche" class="form-control" placeholder="Rechercher un drama par titre..." aria-label="Rechercher un drama">
+    </div>
+  </div>
+
+  <!-- Romance -->
+  <div class="container my-5 drama-section" id="romance">
     <h3 class="mb-3">Romance</h3>
     <div class="drama-list">
       <div class="drama-item">
-        <img src="When Life Gives You Tangerines.jpg" alt="Tangarine">
+        <img src="When Life Gives You Tangerines.jpg" alt="Affiche de When Life Gives You Tangerines">
         <p>When Life Gives You Tangerines</p>
       </div>
       <div class="drama-item">
-        <img src="Descendants of the sun.jpg" alt="Romance 2">
-        <p>Descendants of the sun</p>
+        <img src="Descendants of the sun.jpg" alt="Affiche de Descendants of the Sun">
+        <p>Descendants of the Sun</p>
       </div>
       <div class="drama-item">
-        <img src="2125.jpg" alt="Romance 3">
-        <p>Rtwenty-five twenty-one</p>
+        <img src="2125.jpg" alt="Affiche de Twenty-Five Twenty-One">
+        <p>Twenty-Five Twenty-One</p>
       </div>
       <div class="drama-item">
-        <img src="bonapp.jpg" alt="Romance 2">
-        <p>bonne appetie your majesty</p>
+        <img src="bonapp.jpg" alt="Affiche de Bon Appétit, Your Majesty">
+        <p>Bon Appétit, Your Majesty</p>
       </div>
       <div class="drama-item">
-        <img src="iu.jpg" alt="Romance 2">
-        <p>perfect crown</p>
+        <img src="iu.jpg" alt="Affiche de Perfect Crown">
+        <p>Perfect Crown</p>
       </div>
       <div class="drama-item">
-        <img src="family.jpg" alt="Romance 2">
-        <p>family by choice</p>
+        <img src="family.jpg" alt="Affiche de Family by Choice">
+        <p>Family by Choice</p>
       </div>
       <div class="drama-item">
-        <img src="boucle.jpg" alt="Romance 2">
-        <p>love untangled </p>
+        <img src="boucle.jpg" alt="Affiche de Love Untangled">
+        <p>Love Untangled</p>
       </div>
     </div>
   </div>
 
-   <!-- Liste horizontale Action -->
-  <div class="container my-5" id="Action">
+  <!-- Action -->
+  <div class="container my-5 drama-section" id="action">
     <h3 class="mb-3">Action</h3>
     <div class="drama-list">
       <div class="drama-item">
-        <img src="THE MANIPULATED.jpg" alt="THE MANIPULATED">
-        <p>THE MANIPULATED</p>
+        <img src="THE MANIPULATED.jpg" alt="Affiche de The Manipulated">
+        <p>The Manipulated</p>
       </div>
       <div class="drama-item">
-        <img src="blood.jpg" alt="blood">
-        <p>BLOODHOUNDS</p>
+        <img src="blood.jpg" alt="Affiche de Bloodhounds">
+        <p>Bloodhounds</p>
       </div>
       <div class="drama-item">
-        <img src="weak.jpg" alt="weak">
-        <p>weak hero class</p>
+        <img src="weak.jpg" alt="Affiche de Weak Hero Class">
+        <p>Weak Hero Class</p>
       </div>
       <div class="drama-item">
-        <img src="Ballerina.jpg" alt="ballerina">
-        <p>ballerina</p>
+        <img src="Ballerina.jpg" alt="Affiche de Ballerina">
+        <p>Ballerina</p>
       </div>
       <div class="drama-item">
-        <img src="Teach You A Lesson poster.jpg" alt="Teach You A Lesson">
+        <img src="Teach You A Lesson poster.jpg" alt="Affiche de Teach You A Lesson">
         <p>Teach You A Lesson</p>
       </div>
       <div class="drama-item">
-        <img src="goodboy.jpg" alt="good boy">
-        <p>good boy</p>
+        <img src="goodboy.jpg" alt="Affiche de Good Boy">
+        <p>Good Boy</p>
       </div>
       <div class="drama-item">
-        <img src="Vagabond.jpg" alt="Vagabond">
-        <p>Vagabond </p>
+        <img src="Vagabond.jpg" alt="Affiche de Vagabond">
+        <p>Vagabond</p>
       </div>
     </div>
   </div>
 
-
-
-
-    <!-- Liste horizontale comedie -->
-  <div class="container my-5" id="comedie">
-    <h3 class="mb-3">comedie</h3>
+  <!-- Comédie -->
+  <div class="container my-5 drama-section" id="comedie">
+    <h3 class="mb-3">Comédie</h3>
     <div class="drama-list">
       <div class="drama-item">
-        <img src="wonderfol.jpg " alt="wonderfools">
-        <p>The wonderfools</p>
+        <img src="wonderfol.jpg" alt="Affiche de The Wonderfools">
+        <p>The Wonderfools</p>
       </div>
       <div class="drama-item">
-        <img src="jihoon.jpg" alt="The Legend of Kitchen Soldier">
+        <img src="jihoon.jpg" alt="Affiche de The Legend of Kitchen Soldier">
         <p>The Legend of Kitchen Soldier</p>
       </div>
       <div class="drama-item">
-        <img src="miss hong.jpg" alt="Undercover Miss Hong">
+        <img src="miss hong.jpg" alt="Affiche de Undercover Miss Hong">
         <p>Undercover Miss Hong</p>
       </div>
       <div class="drama-item">
-        <img src="Boyfriend On Demand.jpg" alt="Boyfriend On Demand">
+        <img src="Boyfriend On Demand.jpg" alt="Affiche de Boyfriend On Demand">
         <p>Boyfriend On Demand</p>
       </div>
       <div class="drama-item">
-        <img src="Cabbage Your Life Kdrama Poster.jpg" alt="Cabbage Your Life">
+        <img src="Cabbage Your Life Kdrama Poster.jpg" alt="Affiche de Cabbage Your Life">
         <p>Cabbage Your Life</p>
       </div>
       <div class="drama-item">
-        <img src="FILING FOR LOVE.jpg" alt="FILING FOR LOVE">
-        <p>FILING FOR LOVE</p>
+        <img src="FILING FOR LOVE.jpg" alt="Affiche de Filing for Love">
+        <p>Filing for Love</p>
       </div>
       <div class="drama-item">
-        <img src="jsp.jpg" alt="second shot of love ">
-        <p>second shot of love </p>
+        <img src="jsp.jpg" alt="Affiche de Second Shot at Love">
+        <p>Second Shot at Love</p>
       </div>
     </div>
   </div>
 
+  <p id="aucun-resultat" class="my-5" style="display:none;">Aucun drama ne correspond à ta recherche.</p>
+
   <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4 footer-section">
-  <p>© 2026 K-Drama World | Tous droits réservés</p>
-  <div class="social-icons mt-2">
-    <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-    <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-  </div>
-</footer>
+  <footer class="bg-dark text-white text-center py-4 footer-section">
+    <p>© 2026 K-Drama World | Tous droits réservés</p>
+    <div class="social-icons mt-2">
+      <a href="#" class="text-white me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

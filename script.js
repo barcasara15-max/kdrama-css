@@ -198,3 +198,53 @@ etiquettes.forEach(function (etiquette) {
     etiquette.classList.add("tag-loin");
   }
 });
+
+// ------------------------------------------------------------
+// 7. RECHERCHE TMDb : connexion à l'API pour afficher les films
+// ------------------------------------------------------------
+const apiKey = "7d154a8efb58f85fb3bee505ada3809b"; // 🔑 Mets ici ta clé API TMDb
+const searchInput = document.getElementById("recherche");
+const aucunResultat = document.getElementById("aucun-resultat");
+
+// Crée une zone pour afficher les résultats
+const resultsContainer = document.createElement("div");
+resultsContainer.className = "drama-list";
+aucunResultat.insertAdjacentElement("beforebegin", resultsContainer);
+
+searchInput.addEventListener("input", async () => {
+  const query = searchInput.value.trim();
+  if (!query) {
+    resultsContainer.innerHTML = "";
+    aucunResultat.style.display = "none";
+    return;
+  }
+
+  try {
+   const response = await fetch(
+  `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${encodeURIComponent(query)}&language=fr-FR`
+);
+
+    const data = await response.json();
+
+    resultsContainer.innerHTML = "";
+    if (data.results.length === 0) {
+      aucunResultat.style.display = "block";
+    } else {
+      aucunResultat.style.display = "none";
+      data.results.forEach(movie => {
+        if (!movie.poster_path) return; // ignore les films sans affiche
+        const card = document.createElement("div");
+        card.className = "drama-item";
+        card.innerHTML = `
+          <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" alt="${movie.title}">
+          <p>${movie.title} ⭐ ${movie.vote_average}</p>
+        `;
+        resultsContainer.appendChild(card);
+      });
+    }
+  } catch (error) {
+    console.error("Erreur API TMDb :", error);
+    aucunResultat.style.display = "block";
+    aucunResultat.textContent = "Erreur lors de la recherche.";
+  }
+});
